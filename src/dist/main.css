@@ -14,14 +14,16 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 18px;
-  height: 100dvh;
+  height: 100svh;
   background-color: hsl(221, 100%, 96%);
 }
 
 main {
-  height: min(100% - 3.5rem, 100%);
-  width: 100%;
+  height: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   background-color: inherit;
+  justify-content: space-between;
 }
 
 .font-medium {
@@ -53,10 +55,6 @@ main {
   gap: 0.5rem;
 }
 
-gap-2 {
-  gap: 1rem;
-}
-
 :root {
   --light-state-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
@@ -73,7 +71,6 @@ gap-2 {
   --orangey-yellow-500: hsla(39, 100%, 56%, 1);
   --green-teal-500: hsla(166, 100%, 37%, 1);
   --cobalt-blue-500: hsla(234, 85%, 45%, 1);
-
   --light-red: hsla(0, 100%, 67%, 0.05);
   --orangey-yellow: hsla(39, 100%, 56%, 0.05);
   --green-teal: hsla(166, 100%, 37%, 0.05);
@@ -154,7 +151,6 @@ p {
 .result-card .result .feedback span {
   font-size: 2rem;
 }
-
 .summary-card {
   justify-content: space-between;
 }
@@ -221,10 +217,13 @@ p {
     position: relative;
     bottom: 0;
     top: 0;
-    margin-top: 100%;
+    margin-top: 120%;
+  }
+  #footer {
+    margin-top: 150%;
   }
 }
-@media (width < 740px) and (width < 435px) {
+@media (width < 740px) and (width < 460px) {
   .card {
     padding: 2rem 2.5rem;
     min-width: 20rem;
@@ -232,7 +231,10 @@ p {
     font-size: 16px;
   }
   .cards-wrapper {
-    margin-top: auto;
+    margin-top: 150%;
+  }
+  #footer {
+    margin-top: 150%;
   }
   .result-card {
     min-height: 28rem;
@@ -248,4 +250,25 @@ p {
     font-size: 1.7rem;
   }
 }
+#footer {
+  width: 100%;
+  background-color: hsl(241, 100%, 89%);
+  padding: 20px 0;
+  color: hsl(224, 30%, 27%);
+}
+#footer a {
+  color: hsl(241, 81%, 54%);
+}
+#footer .wrapper {
+  gap: 10px;
+}
+#footer .btn-link {
+  padding: 5px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-decoration: none;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
 /* -------------------- */ /*# sourceMappingURL=main.css.map */
