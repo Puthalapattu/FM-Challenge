@@ -260,7 +260,14 @@ p {
   color: hsl(241, 81%, 54%);
 }
 #footer .wrapper {
-  gap: 10px;
+  gap: 20px;
+}
+#footer hr {
+  height: 1px;
+  width: 100%;
+  background: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #footer .btn-link {
   padding: 5px 10px;
